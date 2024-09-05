@@ -4,23 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop Together</title>
+    <title>Wishlist</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <header>
         <a href="popup.html"><img src="shop_together2.png"></a>
-        <select id="wishlistDropdown">
+        <select id="wishlistDropdownContent">
             <option value="">Select Wishlist</option>
         </select>
     </header>
 
-    <main>
-        <button id="createWishlistBtn">Create New Wishlist</button>
-        <button id="addToWishlistBtn">Add to Wishlist</button>
-        <a href="wishlist.html"><button>Check Wishlist Items</button></a>
+
+    <main id="wishlistContent">
+        <h2>Select Wishlist to get content.....</h2>
+        <!-- Items from selected wishlist will be displayed here -->
     </main>
+    <div class="clear-wishlist">
+        <button id="clearSelectedWishlist">Clear Wishlist</button>
+    </div>
+
     <div class="footer">
         <button onclick="shareWishlistViaWhatsApp()">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 64 64" xml:space="preserve">
@@ -60,9 +64,9 @@
                 </g>
             </svg>
         </button>
-    </div>
-
-    <script src="script.js"></script>
+    </div <script src="script.js">
+    </script>
+    <script src="wishlist.js"></script>
 </body>
 
 </html>

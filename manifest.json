@@ -2,22 +2,15 @@
   "manifest_version": 3,
   "name": "Shop Together",
   "version": "1.0",
-  "permissions": ["activeTab", "storage", "tabs", "identity"],
+  "description": "Create and share wishlists together!",
   "action": {
     "default_popup": "popup.html",
-    "default_icon": {
-      "16": "icon16.png",
-      "48": "icon48.png",
-      "128": "icon128.png"
-    }
+    "default_title": "Shop Together"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
+  "permissions": ["storage", "activeTab", "tabs"],
+  "icons": {
+    "16": "shop_together1.png",
+    "48":"shop_together2.png",
+    "128": "shop_together.png"
+  }
 }
