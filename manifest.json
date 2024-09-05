@@ -1,16 +1,16 @@
 {
   "manifest_version": 3,
-  "name": "Shop Together",
+  "name": "WishMate",
   "version": "1.0",
-  "description": "Create and share wishlists together!",
+  "description": "The ultimate wishlist companion ! WishMate is the ultimate tool for seamless wishlist management and sharing.",
   "action": {
     "default_popup": "popup.html",
-    "default_title": "Shop Together"
+    "default_title": "WishMate"
   },
   "permissions": ["storage", "activeTab", "tabs"],
   "icons": {
-    "16": "shop_together1.png",
-    "48":"shop_together2.png",
-    "128": "shop_together.png"
+    "16": "wishMate2.png",
+    "48":"wishMate.png",
+    "128": "wishMate1.png"
   }
 }

@@ -1,7 +1,7 @@
 // Display items in wishlist.html
 document.addEventListener('DOMContentLoaded', function () {
   const wishlistDropdownContent = document.getElementById('wishlistDropdownContent');
-    const wishlistContent = document.getElementById('wishlistContent');
+    const wishListItems = document.getElementById('wishListItems');
     let selectedWishlist = localStorage.getItem('selectedWishlist');
     let wishlists = JSON.parse(localStorage.getItem('wishlists'));
   
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   async function updateWishlistContent() {
     let selectedWishlist = wishlistDropdownContent.value;
-    wishlistContent.innerHTML = '';  // Clear previous content
+    wishListItems.innerHTML = '';  // Clear previous content
   
-    if (selectedWishlist && wishlists[selectedWishlist]) {
+    if (selectedWishlist && wishlists[selectedWishlist] && wishlists[selectedWishlist].length > 0) {
       // Display a preview for each URL in the wishlist
       for (let url of wishlists[selectedWishlist]) {
         try {
@@ -50,17 +50,17 @@ document.addEventListener('DOMContentLoaded', function () {
           previewDiv.appendChild(description);
   
           // Add the preview element to the content section
-          wishlistContent.appendChild(previewDiv);
+          wishListItems.appendChild(previewDiv);
   
         } catch (error) {
           console.error('Error creating URL preview:', error);
           let errorMessage = document.createElement('p');
           errorMessage.textContent = 'Error creating URL preview.';
-          wishlistContent.appendChild(errorMessage);
+          wishListItems.appendChild(errorMessage);
         }
       }
     } else {
-      wishlistContent.innerHTML = '<p>No items found in this wishlist.</p>';
+      wishListItems.innerHTML = '<p>No items found in this wishlist.</p>';
     }
   }
   

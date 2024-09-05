@@ -13,17 +13,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2056a1;
+  background-color: #6789ba;
   height: 50px; 
   padding: 0px 10px;
 }
 
 header img {
-  height: 42px;
+  height: 40px;
 }
 
 header select {
-  height: 30px;
+  height: 26px;
   border-radius: 4px;
 }
 
@@ -34,10 +34,11 @@ main {
   text-align: center;
   height: 400px;
 }
-
-.footer {
-  margin-bottom: 1px;
+.footer{
   background-color: #efefef;
+}
+.share {
+  margin-bottom: 1px;
   display: flex;
   justify-content: center;
   padding: 0rem;
@@ -46,16 +47,15 @@ main {
   position: sticky;
 }
 
-.footer button {
+.share button {
   margin: 10px;
   padding: 0px 25px;
   cursor: pointer;
   border: none;
 }
-.footer button:hover
+.share button:hover
 {
-  height: 120%;
-  width: 120%;
+  transform: translateY(-5px);
 }
 
 .fullsizebutton {
@@ -66,4 +66,8 @@ main {
 .fullsizebutton:hover{
   filter: drop-shadow(10px 10px 20px rgba(36, 36, 36, 0.5));
 }
-
+.copyright {
+  text-align: center;
+  height: 34px;
+  border-top: 1px solid #ddd;
+}
