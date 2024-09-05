@@ -28,6 +28,13 @@ header select {
 }
 
 
+#tagline {
+  font-size: 39px;
+  text-align: left;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+
+}
 
 main {
   padding: 20px;

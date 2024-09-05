@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+
   // Populate dropdown with existing wishlists
   const wishlistDropdown = document.getElementById('wishlistDropdown');
   for (let key in wishlists) {

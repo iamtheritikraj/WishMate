@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let selectedWishlist =
         wishlistDropdown?.value || wishlistDropdownContent?.value;
 
-      if (selectedWishlist) {
+      if (selectedWishlist&&wishlists[selectedWishlist].length>0) {
         let wishlistItems = wishlists[selectedWishlist]
           .map((item) => decodeURIComponent(item)) // Decode URL encoding if any
           .join("\n Check this out: \t"); // Join items with new lines
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.open(shareUrl); // Open WhatsApp share URL in a new tab
       } else {
-        alert("Please select a valid wishlist first.");
+        alert("Empty Wishlist !!!");
       }
     });
 });
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let selectedWishlist =
         wishlistDropdown?.value || wishlistDropdownContent?.value;
 
-      if (selectedWishlist) {
+      if (selectedWishlist&&wishlists[selectedWishlist].length>0) {
         let wishlistItems = wishlists[selectedWishlist]
           .map((item) => decodeURIComponent(item)) // Decode URL encoding if any
           .join("\n Check this out: \t"); // Join items with new lines
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.open(mailtoUrl); // Open email client with pre-filled subject and body
       } else {
-        alert("Please select a valid wishlist first.");
+        alert("Empty Wishlist !!!");
       }
     });
 });
@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
       let selectedWishlist =
         wishlistDropdown?.value || wishlistDropdownContent?.value;
 
-      if (selectedWishlist) {
+      if (selectedWishlist&&wishlists[selectedWishlist].length>0) {
         let wishlistItems = wishlists[selectedWishlist]
           .map((item) => decodeURIComponent(item)) // Decode URL encoding if any
           .join("\n Check this out: \t"); // Join items with new lines
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.open(telegramUrl); // Open Telegram share window
       } else {
-        alert("Please select a valid wishlist first.");
+        alert("Empty Wishlist !!!");
       }
     });
 });
