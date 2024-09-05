@@ -1,53 +1,69 @@
+html{
+  border-radius: 2px;
+}
 body {
-    width: 300px;
-    height: 400px;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    background-color: #2056a1;
-    height: 50px;
-    padding: 0 10px; 
+  width: 300px;
+  height: 500px;
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2056a1;
+  height: 50px; 
+  padding: 0px 10px;
 }
 
 header img {
-    height: 42px; 
+  height: 42px;
 }
 
 header select {
-    height: 30px; 
-    border-radius: 2px;
+  height: 30px;
+  border-radius: 4px;
 }
 
 
 
-  main {
-    padding: 20px;
-    text-align: center;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-  }
-  .footer {
-    margin-bottom: 1px;
-    background-color: #efefef;
-    display: flex;
-    justify-content: center;
-    padding: 0rem;
-    border-top: 1px solid #ddd;
+main {
+  padding: 20px;
+  text-align: center;
+  height: 400px;
 }
+
+.footer {
+  margin-bottom: 1px;
+  background-color: #efefef;
+  display: flex;
+  justify-content: center;
+  padding: 0rem;
+  border-top: 1px solid #ddd;
+  height: 50px;
+  position: sticky;
+}
+
 .footer button {
-    margin: 10px;
-    padding: 10px 20px;
-    cursor: pointer;
-    border: none;
-  }
-  
+  margin: 10px;
+  padding: 0px 25px;
+  cursor: pointer;
+  border: none;
+}
+.footer button:hover
+{
+  height: 120%;
+  width: 120%;
+}
+
+.fullsizebutton {
+  width: 100%;
+  margin: 19px 0px;
+  padding: 10px;
+}
+.fullsizebutton:hover{
+  filter: drop-shadow(10px 10px 20px rgba(36, 36, 36, 0.5));
+}
+
