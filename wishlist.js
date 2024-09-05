@@ -25,20 +25,46 @@ document.addEventListener('DOMContentLoaded', function () {
   wishlistDropdownContent.addEventListener('change', updateWishlistContent);
   // Function to update the wishlist content based on selected wishlist
 
-  function updateWishlistContent() {
+  async function updateWishlistContent() {
     let selectedWishlist = wishlistDropdownContent.value;
     wishlistContent.innerHTML = '';  // Clear previous content
-
+  
     if (selectedWishlist && wishlists[selectedWishlist]) {
-      wishlists[selectedWishlist].forEach(item => {
-        let p = document.createElement('p');
-        p.textContent = item;
-        wishlistContent.appendChild(p);
-      });
+      // Display a preview for each URL in the wishlist
+      for (let url of wishlists[selectedWishlist]) {
+        try {
+          // Create a preview element for the URL
+          let previewDiv = document.createElement('div');
+          previewDiv.className = 'url-preview';
+  
+          // Create an anchor element for the URL
+          let link = document.createElement('a');
+          link.href = url;
+          link.textContent = url;
+          link.target = '_blank';  // Open in a new tab
+          previewDiv.appendChild(link);
+  
+          // Add a static description or message
+          let description = document.createElement('p');
+          description.textContent = 'Click the link to view the page.';
+          previewDiv.appendChild(description);
+  
+          // Add the preview element to the content section
+          wishlistContent.appendChild(previewDiv);
+  
+        } catch (error) {
+          console.error('Error creating URL preview:', error);
+          let errorMessage = document.createElement('p');
+          errorMessage.textContent = 'Error creating URL preview.';
+          wishlistContent.appendChild(errorMessage);
+        }
+      }
     } else {
       wishlistContent.innerHTML = '<p>No items found in this wishlist.</p>';
     }
   }
+  
+  
 
 
   document.getElementById('clearSelectedWishlist').addEventListener('click', () => {
@@ -69,6 +95,6 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Please select a wishlist first.');
     }
   });
-  
-  });
+
+});
   

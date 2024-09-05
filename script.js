@@ -1,6 +1,3 @@
-// Sample wishlists stored in local storage
-let wishlists = JSON.parse(localStorage.getItem('wishlists')) || {};
-
 document.addEventListener('DOMContentLoaded', function () {
   // Populate dropdown with existing wishlists
   const wishlistDropdown = document.getElementById('wishlistDropdown');
@@ -42,30 +39,4 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Please select a wishlist first.');
     }
   });
-  
-
-  // Check wishlist
-  document.getElementById('checkWishlistBtn').addEventListener('click', () => {
-    let selectedWishlist = wishlistDropdown.value;
-    if (selectedWishlist) {
-      window.location.href = 'wishlist.html';
-    } else {
-      alert('Please select a wishlist first.');
-    }
-  });
-
-  // Share wishlist
-  document.getElementById('shareBtn').addEventListener('click', () => {
-    let selectedWishlist = wishlistDropdown.value;
-    if (selectedWishlist) {
-      let wishlistItems = wishlists[selectedWishlist].join('\n');
-      let message = `Check out my wishlist: \n${wishlistItems}`;
-      let shareUrl = encodeURI(`https://wa.me/?text=${message}`); // WhatsApp share link
-      window.open(shareUrl);
-    } else {
-      alert('Please select a wishlist first.');
-    }
-  });
-
-  
 });
